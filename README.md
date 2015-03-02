@@ -2,6 +2,14 @@
 
 A collection of new and modified ansible plugins.
 
+## lookup_plugins/gpg
+
+Lookup plug that reads GPG encrypted files.
+
+```yaml
+copy: content="{{lookup('gpg', 'files/secure.gpg')}}" dst=...
+```
+
 ## vars_plugins/gpg_vars
 
 Reads group and host variablse in the same style as ansible group_vars and
